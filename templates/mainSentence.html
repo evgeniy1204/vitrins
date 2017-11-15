@@ -1,0 +1,37 @@
+<div class="item-sentence-wrapper" ng-repeat="value in mainSentence">
+    <div class="logo-sentence">
+        <img src="{{value.logoUrl}}" alt="logo">
+    </div>
+    <div class="slogan-sentence">
+        <p>{{value.slogan}}</p>
+    </div>
+    <div class="content-sentence">
+        <div class="item-sentence">
+            <div>
+                <p class="item-title">Сумма</p>
+                <p class="item-text">{{value.zaimSumm}}</p>
+            </div>
+        </div>
+        <div class="item-sentence">
+            <div>
+                <p class="item-title">Срок</p>
+                <p class="item-text">{{value.zaimSrok}} <span>{{value.zaimType}}</span></p>
+            </div>
+        </div>
+        <div class="item-sentence">
+            <div>
+                <p class="item-title">Процент</p>
+                <p class="item-text">{{value.proc}} <span>{{value.procType}}</span></p>
+            </div>
+        </div>
+        <div class="item-sentence">
+            <div>
+                <p class="item-title">Возраст</p>
+                <p class="item-text">{{value.minMaxAge}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-sentence">
+        <a href="{{value.refUrl}}"><button class="btn-sentence clr-theme-back">Оформить</button></a>
+    </div>
+</div>

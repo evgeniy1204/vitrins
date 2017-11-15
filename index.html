@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mega	</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/node_modules/angular/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+    <body>
+        <div class="wrapper clr-blue" ng-app="vitrin" ng-cloak>
+            <header>
+                <h1><span class="clr-theme">Posta</span>Bank</h1>
+            </header>
+            <section class="sec-top">
+                <p>Вам автоматичски <span class="clr-theme">одобрены</span> следующие предложения</p>
+            </section>
+
+            <div class="sentences" ng-controller="VitrinController">
+                <section class="main-sentence">
+                    <div main-sentence></div>
+                </section>
+                <section class="other-sentences">
+                    <p class="other-title">
+                        Другие предложения
+                    </p>
+                    <div class="sentences">
+                        <div other-sentence></div>
+                    </div>
+                </section>
+            </div>
+            <div class="footer clr-theme-back">
+                <p class="static-footer">
+                    Общество с ограниченной ответственностью «Лайф-медиа», 443083, Самарская обл., Самара г, ул. Безымянный 1-й пер, д. 9, офис 150, ОГРН 1146318003589, ИНН 6318242161, КПП 631801001, Свидетельство о регистрации ЦБ РФ № 5077746931928 от 12.03.2015 года.
+                </p>
+            </div>
+        </div>
+        <script>
+            var vitrinApp = angular.module('vitrin',[]).run(function($rootScope) {
+                $rootScope.baseTemplateUrl = '/templates/';
+            });
+        </script>
+        <script src="/js/Controllers/VitrinController.js"></script>
+        <script src="/js/Directives/mainSentences.js"></script>
+        <script src="/js/Directives/otherSentences.js"></script>
+    </body>
+</html>
